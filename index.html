@@ -1,0 +1,153 @@
+---
+layout: default
+title: Sally's Educational Portfolio
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script>
+	  $(document).ready(function(){
+	    // Add smooth scrolling to all links
+	    $("a").on('click', function(event) {
+
+	      // Make sure this.hash has a value before overriding default behavior
+	      if (this.hash !== "") {
+	        // Prevent default anchor click behavior
+	        event.preventDefault();
+
+	        // Store hash
+	        var hash = this.hash;
+
+	        // Using jQuery's animate() method to add smooth page scroll
+	        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	        $('html, body').animate({
+	          scrollTop: $(hash).offset().top
+	        }, 800, function(){
+
+	          // Add hash (#) to URL when done scrolling (default click behavior)
+	          window.location.hash = hash;
+	        });
+	      } // End if
+	    });
+	  });
+	  </script>
+
+	<style>
+		#more {display: none;}
+	</style>
+	</head>
+
+	<body>
+
+		<div class="blue" id="section1"><div class="flex-container">
+			<div class="left-content">
+				<h1>Xuechen Liu 劉雪晨</h1>
+				<address>
+					<strong>The University of Michigan, Ann Arbor</strong><br>
+					School of Education<br>
+					<abbr title="phone">Phone:</abbr> (734) xxx-xxxx<br>
+					<span class="obfuscate">Email: liuxuech@umich.edu</span>
+				</address>
+				<a href="#section2">View Portfolio</a>
+			</div>
+			<div class="right-content">
+				<img src="xuechen1.jpeg" class="about" alt="profile picture" style="width:75%"/>
+			</div>
+		</div></div>
+
+<!-- Photo portfolio of Research Interests -->
+
+		<div class="white" id="section2">
+			<h2 style="margin-left:125px">Research Interest</h2>
+			<div class="flex-container">
+		    <div class="left-content">
+					<a href="/bilingualism">
+						<img src="bilingualism.jpeg" style="width:100%"/>
+					</a>
+		    </div>
+				<div class="right-content">
+	        <a href="/bilingualism"><h5>Bilingualism</h5></a>
+					<p> “Bilingualism” is often used to describe people who can use two languages fluently. My teaching experience and my own experience of being a bilingual learner
+						<span id="dots">...</span><span id="more">
+							make me have passion for exploring bilingual learners’ language and literacy development especially for those bilingual learners whose parents immigrated to another country. Some general research questions I want to further explore: 1) What factors do impact bilingual learners’ language and literacy development? I am especially interested in the impact of the home/school environment. 2) How can bilingual learners’ parents and teachers support their language and literacy development? 3) What factors do impact bilingual learners’ willingness to use their heritage language and to inherit their heritage culture?</span>
+				</p>
+					<button onclick="myFunction()" id="myBtn">Read more</button>
+				</div>
+	    </div>
+
+			<div class="flex-container" id="section3">
+		    <div class="left-content">
+					<a href="/how_to_use_tech_to_support_bilingual_children"><h5>How to Use Technology to Support Bilingual Children</h5></a>
+					<p>In the 21st century, there are so many technologies supporting foreign language learning, but how many of them were specially designed for bilingual learners especially for those heritage learners. Many researchers have already pointed out that heritage learners have different learning needs with foreign language learners.</p>
+
+					<p><a href="https://sally-personal-portfolio.netlify.app/how_to_use_tech_to_support_bilingual_children/">View more</a></p>
+				</div>
+				<div class="right-content">
+					<a href="/how_to_use_tech_to_support_bilingual_children">
+						<img src="tech.jpeg" style="width:100%"/>
+					</a>
+				</div>
+	    </div>
+	  </div>
+
+
+<!-- Photo portfolio of Research Interests -->
+		<div class="green"><div class="inner">
+			<h2>Past Experience</h2>
+
+			</div>
+			<div class="flex-container">
+				<div class="left-content">
+					<h5 style="font-weight:700">Research Assistant:</h5>
+					<ol>
+						<li>Language Resource Center at University of Michigan</li>
+						<li>Vialab Lab at University of Michigan</li>
+						<li>Research “How should teachers honor heritage children’ home language?”</li>
+					</ol>
+					<br>
+					<p>The objectives of my research experience are to organize, design and advocate heritage classes. I partipated in various stages of research projects, including transcription, data analysis and reporting.</p>
+				</div>
+				<div class="middle-content">
+					<h5 style="font-weight:700">Teaching Assistant:</h5>
+					<br>
+					<p>I taught two semesters of Chinese lessons for elementary and advanced level Chinese at Michigan State University. I applied interactive pedagogical methods to design lesson plans and lecture for young Chinese language learners.</p>
+					<br>
+					<p>I also taught English in Japan Center for Michigan University through workshops with local classrooms.</p>
+				</div>
+				<div class="right-content">
+					<h5 style="font-weight:700">Presentations:</h5>
+					<br>
+					<p>I am preparing an user experience topic and advertising UX@UM student conference at University of Michigan, School of Education.</p>
+					<br>
+					<p>I presented the topic "Teaching Culture in the World Language Classroom" at the Center for Language Teaching Advancement (CeLTA), Michigan State University.</p>
+					<br>
+					<p><a href="https://docs.google.com/document/d/1Rz0arKYNWrtWK1lXk3OK9gwbqfYnfDFjufviQ4219oQ/edit?usp=sharing">View more</a></p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function myFunction() {
+			  var dots = document.getElementById("dots");
+			  var moreText = document.getElementById("more");
+			  var btnText = document.getElementById("myBtn");
+
+			  if (dots.style.display === "none") {
+			    dots.style.display = "inline";
+			    btnText.innerHTML = "Read more";
+			    moreText.style.display = "none";
+			  } else {
+			    dots.style.display = "none";
+			    btnText.innerHTML = "Read less";
+			    moreText.style.display = "inline";
+			  }
+			}
+
+		</script>
+
+
+
+	</body>
+</html>
